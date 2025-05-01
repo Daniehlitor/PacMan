@@ -19,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const blinky = new Ghost('blinky', 35, 'red', 500);
     const pinky = new Ghost('pinky', 36, 'pink', 600);
     const ghosts = [blinky, pinky];
+    // Commit check
 });
