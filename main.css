@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Arial, sans-serif;
     background-color: #3a3a3a;
     color: #fff;
@@ -21,6 +21,7 @@ h1 {
 .wall {
     background-color: #4682b4;
     border: 2px solid #2d5575;
+    border-radius: 5px;
 }
 
 .dot {
@@ -40,19 +41,54 @@ h1 {
 }
 
 .pacman {
-    background-color: yellow;
+    mask-image: url("assets/pacman.png");
+    mask-size: 80% 80%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: #fdff00;
     border-radius: 50%;
+}
+
+.pacman.look-left {
+    transform: scaleX(-1);
+}
+
+.pacman.look-up {
+    transform: rotate(-90deg);
+}
+
+.pacman.look-down {
+    transform: rotate(90deg);
+}
+
+.pacman::after {
+    inset: 0;
 }
 
 .ghost {
     border-radius: 50%;
     position: relative;
+    mask-image: url("assets/ghost.svg");
+    mask-size: 90% 90%;
+    mask-repeat: no-repeat;
+}
+
+.ghost::after {
+    inset: 0;
 }
 
 .ghost.red {
-    background-color: crimson;
+    background-color: #d03e19;
 }
 
 .ghost.pink {
-    background-color: pink;
+    background-color: #ea82e5;
+}
+
+.ghost.orange {
+    background-color: #db851c;
+}
+
+.ghost.blue {
+    background-color: #46bfee;
 }

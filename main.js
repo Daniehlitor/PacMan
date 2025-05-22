@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const width = 10;
     let pacManIndex = 11;
+    let score = 0;
 
     class Ghost {
         constructor(name, startIndex, className, speed = 500) {
@@ -57,16 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
         cells[pacManIndex].classList.add('pacman');
     }
 
+    function updateScore() {
+        document.querySelector("#score").textContent = score;
+    }
+
     drawPacman();
+    updateScore();
 
     document.addEventListener('keydown', (e) => {
-        cells[pacManIndex].classList.remove('pacman');
+        cells[pacManIndex].classList.remove('pacman', 'look-left', 'look-up', 'look-down');
+        
+        var looking;
 
         switch (e.key) {
             case 'ArrowLeft':
                 if (pacManIndex % width !== 0 && !cells[pacManIndex - 1].classList.contains('wall')) {
                     pacManIndex -= 1;
                 }
+                looking = 'look-left';
                 break;
             case 'ArrowRight':
                 if (pacManIndex % width < width - 1 && !cells[pacManIndex + 1].classList.contains('wall')) {
@@ -77,14 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (pacManIndex - width >= 0 && !cells[pacManIndex - width].classList.contains('wall')) {
                     pacManIndex -= width;
                 }
+                looking = 'look-up';
                 break;
             case 'ArrowDown':
                 if (pacManIndex + width < cells.length && !cells[pacManIndex + width].classList.contains('wall')) {
                     pacManIndex += width;
                 }
+                looking = 'look-down';
                 break;
         }
-        
         drawPacman();
+
+        if(looking) {
+            cells[pacManIndex].classList.add(looking);
+        }
+
+        if (cells[pacManIndex].classList.contains('dot')) {
+            cells[pacManIndex].classList.remove('dot');
+            score += 10;
+            updateScore();
+        }
     })
 });
