@@ -15,6 +15,8 @@
 
     <h5>Puntuacion: <span id="score"></span></h5>
 
+    <h5>Vidas: <span id="lifes"></span></h5>
+
     <div class="grid">
         <!-- Fila 1 -->
         <div class="wall"></div>
@@ -45,7 +47,7 @@
         <div class="wall"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="power-pellet"></div>
         <div class="wall"></div>
         <div class="wall"></div>
         <div class="wall"></div>
@@ -97,7 +99,7 @@
         <div class="wall"></div>
         <div class="wall"></div>
         <div class="wall"></div>
-        <div class="dot"></div>
+        <div class="power-pellet"></div>
         <div class="wall"></div>
 
         <!-- Fila 8 -->
@@ -114,7 +116,7 @@
 
         <!-- Fila 9 -->
         <div class="wall"></div>
-        <div class="dot"></div>
+        <div class="power-pellet"></div>
         <div class="wall"></div>
         <div class="dot"></div>
         <div class="wall"></div>
@@ -138,6 +140,20 @@
 
 
     </div>
+
+    <section class="backdrop">
+        <div class="modal">
+
+            <h5 id="msg-title">¡Felicidades!</h5>
+
+            <p id="msg-paragraph">✨🥳 Has ganado 🥳✨</p>
+
+            <button onclick="location.reload(true)">
+                Reiniciar
+            </button>
+        </div>
+    </section>
+
     <script src='main.js'></script>
 </body>
 
