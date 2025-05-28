@@ -19,7 +19,7 @@ Este proyecto es una recreación del juego de Pac-Man, desarrollada desde cero u
 - Si Pac-Man se come un fantasma, reaparecerá cuando el efecto de la pastilla roja haya pasado.
 - Si los fantasmas no están asustados y tocan a Pac-Man este perderá una vida, si las vidas llegan a 0 la partida finalizará.
 
-# Instrucciones para jugar
+# 🎮 Instrucciones para jugar
 Usa las flechas de direccion de tu teclado para mover a Pac-Man.
 - ⬆ Arriba
 - ⬇ Abajo
