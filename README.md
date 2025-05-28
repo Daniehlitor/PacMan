@@ -33,7 +33,7 @@ El objetivo es comer todos los puntos del laberinto sin ser atrapado por los fan
 El juego se acaba cuando comes todos los puntos o pierdes todas tus vidas.
 
 # ✒ Créditos
-*Desarrollado por **Daniel alejandro Jerez Barreto***
+*Desarrollado por **Daniel Alejandro Jerez Barreto***
 
 *Imagenes recuperadas de https://www.streamlinehq.com*
 - **Pacman:** https://www.streamlinehq.com/icons/download/pacman--26755
